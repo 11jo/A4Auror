@@ -1,0 +1,269 @@
+BACKUP ~A4Auror/backup~
+AUTHOR ~Aeviannce (http://www.shsforums.net/topic/37463-auror-kit-for-the-ranger-class/)~
+README ~A4Auror/Language/ENG/Readme-Auror_ENG.txt~
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+////                                                                             ////
+////                                 The Auror                                   ////
+////                       Ranger Class Kit for BGII - EE                        ////
+////                               Version 4.4.1                                 ////
+////                               by Aeviannce24                                ////
+////                                                                             ////
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+//MODDER
+NO_IF_EVAL_BUG
+VERSION ~v4.04~
+
+LANGUAGE ~English~ ~english~ ~A4Auror/Language/ENG/A4Auror-Setup_ENG.tra~
+
+BEGIN @1
+
+//Checks for BGII-EE Installation
+REQUIRE_PREDICATE (NOT GAME_IS ~iwd iwd2 how totlm pst bg1 totsc~) @2 //Check if game is compatible
+
+//internal name of the kit
+ADD_KIT ~A4AUROR~
+
+ //appended to CLASWEAP.2da
+ ~A4AUROR	       1	1	0	1	1	0	0	1~
+ 
+ //appended column-wise to WEAPPROF.2da
+ ~A4AUROR 1 1 5 1 0 0 0 2 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 2 5 5 2 2 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+ 
+ //appended to ABCLASRQ.2da
+ ~A4AUROR	9	17	7	14	12	16~
+ 
+ //appended to ABCLSMOD.2da
+ ~A4AUROR	-6	2	-8	0	0	0~
+ 
+ //appended to ABDCDSRQ.2da
+ ~A4AUROR	0	17	0	14	12	16~
+ 
+ //appended to ABDCSCRQ.2da
+ ~A4AUROR	0	17	0	14	12	16~
+ 
+ //appended to ALIGNMNT.2da
+ ~A4AUROR	0       0       0       1       0       0       1       0       0~
+ 
+ //appended to DUALCLAS.2da
+ ~A4AUROR	0	0	0	0	0	0~
+ 
+ //path to CLAB-style 2da file
+ ~A4Auror/2da/CLABA4AU.2da~
+ 
+ //appended to KITTABLE.2da
+ ~K_R_H K_R_E K_R_HE~
+ 
+ //usability flags appended to KITLIST.2da
+ ~0x10000000	12~
+ 
+ //HLA abilities appended to LUABBR.2da
+ ~***~
+ 
+ //appended to 25STWEAP.2da
+ ~* * HELM07 BAG24 RING06 RING31 CLCK02 BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H39 STAF08~
+ 
+ //Kit name and description
+ SAY @10
+ SAY @11
+ SAY @12
+ 
+ // Call EE compatibility patch
+ ACTION_IF (NOT GAME_IS ~soa tob tutu tutu_totsc bgt ca iwd_in_bg2~) BEGIN
+ 
+ // EE compatibility patch, updated version by Subtledoctor
+         INCLUDE ~A4Auror/lib/fl#add_kit_ee.tpa~
+         COPY ~A4Auror/2da/HPA4AU.2da~ ~override~
+         
+         LAF fl#add_kit_ee
+         STR_VAR
+                kit_name = A4AUROR
+                clsrcreq = ~1 1 1 0 0 0 0~
+                hpclass = ~HPA4AU~
+         END
+ END
+ 
+ //KIT COMPONENTS
+ //Miscellaneous
+ COPY ~A4Auror/Projectile/BAM~ ~override~
+ COPY ~A4Auror/Projectile/VVC~ ~override~
+
+ //Special Abilities
+ COPY ~A4Auror/Ability~ ~override~
+
+ //Innates
+ COPY ~A4Auror/Innate/A4AUI00.spl~ ~override~
+ 	SAY NAME1 @100
+ 	SAY UNIDENTIFIED_DESC @129
+
+ COPY ~A4Auror/Innate/A4AUI00.2da~ ~override~
+
+ COPY ~A4Auror/Innate/A4AUI00A.spl~ ~override~
+ 	SAY NAME1 @101
+ 	SAY UNIDENTIFIED_DESC @130
+
+ COPY ~A4Auror/Innate/A4AUI00B.spl~ ~override~
+ 	SAY NAME1 @105
+ 	SAY UNIDENTIFIED_DESC @131
+
+ COPY ~A4Auror/Innate/A4AUI0AA.itm~ ~override~
+ 	SAY NAME2 @101
+	SAY DESC @118
+
+ COPY ~A4Auror/Innate/A4AUI0AB.itm~ ~override~
+ 	SAY NAME2 @102
+	SAY DESC @118
+
+ COPY ~A4Auror/Innate/A4AUI0AC.itm~ ~override~
+ 	SAY NAME2 @103
+ 	SAY DESC @118
+
+ COPY ~A4Auror/Innate/A4AUI0AD.itm~ ~override~
+ 	SAY NAME2 @104
+ 	SAY DESC @118
+
+ COPY ~A4Auror/Innate/A4AUI0BA.itm~ ~override~
+ 	SAY NAME2 @105
+ 	SAY DESC @119
+
+ COPY ~A4Auror/Innate/A4AUI0BB.itm~ ~override~
+ 	SAY NAME2 @106
+ 	SAY DESC @119
+ COPY ~A4Auror/Innate/A4AUI0BC.itm~ ~override~
+ 	SAY NAME2 @107
+ 	SAY DESC @119
+
+ COPY ~A4Auror/Innate/A4AUI0BD.itm~ ~override~
+ 	SAY NAME2 @108
+ 	SAY DESC @119
+
+ COPY ~A4Auror/Innate/A4AUI0BE.itm~ ~override~
+ 	SAY NAME2 @109
+ 	SAY DESC @119
+ 
+ COPY ~A4Auror/Innate/A4AUI01.spl~ ~override~
+ 	SAY NAME1 @110
+ 	SAY UNIDENTIFIED_DESC @132
+
+ COPY ~A4Auror/Innate/A4AUI02.spl~ ~override~
+ 	SAY NAME1 @111
+ 	SAY UNIDENTIFIED_DESC @133
+
+ COPY ~A4Auror/Innate/A4AUI02A.eff~ ~override~
+ COPY ~A4Auror/Innate/A4AUI02B.eff~ ~override~
+ COPY ~A4Auror/Innate/A4AUI02C.eff~ ~override~
+ COPY ~A4Auror/Innate/A4AUI02D.eff~ ~override~
+ COPY ~A4Auror/Innate/A4AUI02E.eff~ ~override~
+ COPY ~A4Auror/Innate/A4AUI02F.eff~ ~override~
+ COPY ~A4Auror/Innate/A4AUI02G.eff~ ~override~
+ COPY ~A4Auror/Innate/A4AUI02H.eff~ ~override~
+
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP00.pro~
+ COPY ~A4Auror/Innate/A4AUI02A.spl~ ~override~
+ 	WRITE_SHORT   0x98 ~%A4AUP00%~
+ COPY ~A4Auror/Innate/A4AUI02B.spl~ ~override~
+ 	WRITE_SHORT   0x98 ~%A4AUP00%~
+ COPY ~A4Auror/Innate/A4AUI02C.spl~ ~override~
+	WRITE_SHORT   0x98 ~%A4AUP00%~
+ COPY ~A4Auror/Innate/A4AUI02D.spl~ ~override~
+ 	WRITE_SHORT   0x98 ~%A4AUP00%~
+ COPY ~A4Auror/Innate/A4AUI02E.spl~ ~override~
+ 	WRITE_SHORT   0x98 ~%A4AUP00%~
+ COPY ~A4Auror/Innate/A4AUI02F.spl~ ~override~
+	WRITE_SHORT   0x98 ~%A4AUP00%~
+ COPY ~A4Auror/Innate/A4AUI02G.spl~ ~override~
+ 	WRITE_SHORT   0x98 ~%A4AUP00%~
+ COPY ~A4Auror/Innate/A4AUI02H.spl~ ~override~
+ 	WRITE_SHORT   0x98 ~%A4AUP00%~
+
+ COPY ~A4Auror/Innate/A4AUI03.spl~ ~override~
+ 	SAY NAME1 @126
+ 	SAY UNIDENTIFIED_DESC @134
+
+ //Spells
+ COPY ~A4Auror/Spell/A4AUS00.spl~ ~override~
+ 	SAY NAME1 @112
+ 	SAY UNIDENTIFIED_DESC @120
+
+ COPY ~A4Auror/Spell/A4AUS00A.eff~ ~override~
+ COPY ~A4Auror/Spell/A4AUS00B.eff~ ~override~
+ COPY ~A4Auror/Spell/A4AUS00C.eff~ ~override~
+ COPY ~A4Auror/Spell/A4AUS00D.eff~ ~override~
+ COPY ~A4Auror/Spell/A4AUS00E.eff~ ~override~
+ COPY ~A4Auror/Spell/A4AUS00F.eff~ ~override~
+ COPY ~A4Auror/Spell/A4AUS00G.eff~ ~override~
+
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP02.pro~
+ COPY ~A4Auror/Spell/A4AUS00A.spl~ ~override~
+ 	WRITE_SHORT   0x98 ~%A4AUP02%~
+ COPY ~A4Auror/Spell/A4AUS00B.spl~ ~override~
+  	WRITE_SHORT   0x98 ~%A4AUP02%~
+ COPY ~A4Auror/Spell/A4AUS00C.spl~ ~override~
+  	WRITE_SHORT   0x98 ~%A4AUP02%~
+ COPY ~A4Auror/Spell/A4AUS00D.spl~ ~override~
+  	WRITE_SHORT   0x98 ~%A4AUP02%~
+ COPY ~A4Auror/Spell/A4AUS00E.spl~ ~override~
+  	WRITE_SHORT   0x98 ~%A4AUP02%~
+ COPY ~A4Auror/Spell/A4AUS00F.spl~ ~override~
+  	WRITE_SHORT   0x98 ~%A4AUP02%~
+ COPY ~A4Auror/Spell/A4AUS00G.spl~ ~override~
+  	WRITE_SHORT   0x98 ~%A4AUP02%~
+ 
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP01.pro~ 
+ COPY ~A4Auror/Spell/A4AUS01.spl~ ~override~
+  	SAY NAME1 @113
+	SAY UNIDENTIFIED_DESC @121
+	WRITE_SHORT   0x98 ~%A4AUP01%~
+	WRITE_SHORT   0xc0 ~%A4AUP01%~
+	WRITE_SHORT   0xe8 ~%A4AUP01%~
+	WRITE_SHORT   0x110 ~%A4AUP01%~
+	WRITE_SHORT   0x138 ~%A4AUP01%~
+	WRITE_SHORT   0x160 ~%A4AUP01%~
+	WRITE_SHORT   0x188 ~%A4AUP01%~
+
+ COPY ~A4Auror/Spell/A4AUS02.spl~ ~override~
+	SAY NAME1 @114
+	SAY UNIDENTIFIED_DESC @122
+
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP03.pro~ 
+ COPY ~A4Auror/Spell/A4AUS03.spl~ ~override~
+	SAY NAME1 @115
+	SAY UNIDENTIFIED_DESC @123
+	WRITE_SHORT   0x98 ~%A4AUP03%~
+	WRITE_SHORT   0xc0 ~%A4AUP03%~
+	WRITE_SHORT   0xe8 ~%A4AUP03%~
+	WRITE_SHORT   0x110 ~%A4AUP03%~
+	WRITE_SHORT   0x138 ~%A4AUP03%~
+	WRITE_SHORT   0x160 ~%A4AUP03%~
+	WRITE_SHORT   0x188 ~%A4AUP03%~
+
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP04.pro~ 
+ COPY ~A4Auror/Spell/A4AUS04.spl~ ~override~
+	SAY NAME1 @116
+	SAY UNIDENTIFIED_DESC @124
+	WRITE_SHORT   0x98 ~%A4AUP04%~
+	WRITE_SHORT   0xc0 ~%A4AUP04%~
+	WRITE_SHORT   0xe8 ~%A4AUP04%~
+	WRITE_SHORT   0x110 ~%A4AUP04%~
+	WRITE_SHORT   0x138 ~%A4AUP04%~
+
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP05.pro~
+ COPY ~A4Auror/Spell/A4AUS05.spl~ ~override~
+	SAY NAME1 @117
+	SAY UNIDENTIFIED_DESC @125
+	WRITE_SHORT   0x98 ~%A4AUP05%~
+	WRITE_SHORT   0xc0 ~%A4AUP05%~
+	WRITE_SHORT   0xe8 ~%A4AUP05%~
+ 
+ COPY ~A4Auror/Spell/A4AUS05Z.spl~ ~override~
+ 
+ //Items
+ COPY ~A4Auror/Item/A4AUITM0.itm~ ~override~
+ 	SAY NAME2 @127
+	SAY DESC @128
+
+ EXTEND_BOTTOM ~AR0602.bcs~   ~A4Auror/Item/A4AU0602.baf~     // irenicus dungeon 1st floor
+ COMPILE ~A4Auror/Item/A4AU0602.baf~

@@ -1,0 +1,208 @@
+//Note: use "@x=~n~" where X is the number designation and n is the translation
+
+//Installer Text
+@1=~Auror Ranger Class Kit for BGII-TOB & BGII-EE~
+@2=~Game detected: Game is compatible... Proceeding with installation~
+
+//Kit Desc
+@10=~AUROR~
+@11=~Auror~
+@12=~AUROR: A unique type of ranger; skilled with the bow and possessing an exceptional ability to control the elements of ice and the forces of winter. Though normally mistaken to be an Aurillian priest, she does not share the destructive whims of the goddess nor her followers but on the contrary, follows a strict, solitary edict of an unnamed silver dragon, known to be as her hegemon.
+
+Trained to be agile, she is extremely quick and precise in every move but it proves to be a necessity rather than an advantage as the path of becoming an Auror renders her physically weak. This does not prevents her however, to aid those in need. She is an enigmatic protector of the good and a vicious, cold foe of evil.
+
+ADVANTAGES:
+-  +2 bonus to dexterity on character creation.
+-  Immune to charm and confusion.
+-  Grandmaster: bow-type weapons. The Auror may put 5 points in long bow and short bow.
+-  +1 thac0 bonus with missile weapons every 4 levels.
+-  +1 to damage with missile weapons every 6 levels.
+-  +1 bonus to AC and save vs. breath weapons every 3 levels; caps at the 29th level.
+-  +1 bonus to AC vs. missiles every 6 levels; caps at the 30th level.
+-  +1 to save vs. spells every 2 levels till the 8th, then every 3 levels till the 17th, and finally every 4 levels till the 30th level of experience.
+-  Starts with 7% cold resistance, gains +12% every 2 levels till the 10th, then on 13th and 16th, +9% on 20th and 24th, and finally +7% on the 29th level of experience.
+-  +2% magic resistance every level; caps at the 30th level.
+-  Gains additional priest spell slots starting at the 14th level of experience.
+-  Sharpshooting: starts with critical hit chance on 1d19, and then gets better for every 6 levels of experience; caps at the 30th level with a chance of 1d14.
+-  Foresight: at 4th level, the Auror gain an unnatural sense of her surroundings. This allows her to detect and attack hidden enemies (though they still remain invisible) and is impossible to surprise thus, making her immune to backstab attempts.
+-  Frost Touch: at the 6th level, the Auror adds 2d4 cold damage on every attack and freezes the target for 4 rounds unless a successful save vs. spells is made. Missile attacks are charged with psionic force, knocking back targets if fails to save vs. breath.
+-  Innate Abilities
+   2nd Level: Cryogenesis - Ice Blade
+   4th Level: Cryogenesis - Frost Arrow
+   6th Level: Far Sense
+   8th Level: Frost Blink
+   10th Level: Frostbite
+-  Beginning the 8th level of experience, the Auror learns new abilities upon reaching certain levels. They are as follows:
+   8th Level: Glacial Aura
+   10th Level: Frost Wave
+   12th Level: Aurora Borealis
+   15th Level: Dire Frost
+   18th Level: Hoarfrost
+   20th Level: Lament of Winter
+
+DISADVANTAGES:
+-  Available only to human, elves or half-elves of neutral or chaotic good alignment.
+-  -6 to strength and -8 to constitution on character creation.
+-  Hit Die: d4
+-  Incurs -1 penalty to save vs. death every 4 levels of experience.
+-  Has limited proficiency on selected melee and ranged weapons.
+-  Cannot put any point to fighting style proficiency other than Two Weapon Style.
+-  Cannot wear any armor.
+-  Cannot dual class.
+-  No Charm Animal ability.
+-  No high level abilities.~
+
+//Innates Name
+@100=~Cryogenesis~
+@101=~Ice Blade~
+@102=~Ice Blade +1~
+@103=~Ice Blade +2~
+@104=~Ice Blade +3~
+@105=~Frost Arrow~
+@106=~Frost Arrow +1~
+@107=~Frost Arrow +2~
+@108=~Frost Arrow +3~
+@109=~Frost Arrow +4~
+@110=~Frost Blink~
+@111=~Frostbite~
+
+//Innates Desc
+
+@129=~With this ability, the Auror can create a sword or a quiver of arrows made of ice.
+This ability increases in potency as the Auror gains experience.~
+
+@130=~Create Ice Blade~
+
+@131=~Create Frost Arrow~
+
+@118=~This thin, translucent icy blade was created by the Auror's Cryogenesis ability. It is considered magical and behaves as one in respect to its enchantment level.
+
+STATISTICS:
+
+Damage: 1D6
+THACO: +4
+Damage type: piercing
+Weight: 1
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type:  1-handed~
+
+@119=~These arrows are made from the Auror's Cryogenesis ability. They are of pure ice, yet possess the qualities of a normal arrow. They are however, considered magical and behave as one in respect to their enchantment level.
+
+STATISTICS:
+
+Damage: 1d6
+THACO: none
+Damage type: missile (piercing)
+Weight: 0
+Launcher: bow~
+
+@126=~Far Sense~
+@134=~The Auror can extend her psychic sense over long distances to reveal areas that are otherwise impossible through the use of the naked eye.~
+@132=~The Auror can disappear in a gust of ice, and reappear anywhere in an area.~
+@133=~The Auror can supercharge her missile attacks with psionic force. For 4 rounds, all her ranged attacks will explode upon impact, dealing 1d4 stunning and 2d4 cold damage +1 for every 3 levels of experience. Her attack speed incurs a penalty of -2 for the duration of the ability.~
+
+//Spells Name
+@112=~Glacial Aura~
+@113=~Frost Wave~
+@114=~Aurora Borealis~
+@115=~Dire Frost~
+@116=~Hoarfrost~
+@117=~Lament of Winter~
+
+//Spells Desc
+@120=~Glacial Aura
+(Conjuration)
+
+Level: 1
+Sphere: Elemental (Water)
+Range: Personal
+Duration: 1 hour per level
+Casting Time: 1 round
+Area of Effect: 15'
+Saving Throw: Special
+
+The Auror is surrounded by a blue aura that protects her from attacks, granting protection from normal weapons. Enemies within a 15' radius around the Auror takes additional cold damage and are slowed for 1 round unless a successful save vs. breath weapons is made.~
+
+@121=~Frost Wave
+(Evocation)
+
+Level: 1
+Sphere: Elemental (Water)
+Range: Personal
+Duration: Instantaneous
+Casting Time: Instantaneous
+Area of Effect: 20'
+Saving Throw: Special
+
+The Auror releases a psychic blast of cold around her, sending nearby enemies flying away unless a successful save vs. breath weapons is made. The force generated by this spell deals 1d6 stunning and 2d8 cold damage. The Auror has full control of this spell and thus, won’t harm creatures that she deems friendly.~
+
+@122=~Aurora Borealis
+(Conjuration)
+
+Level: 2
+Sphere: Healing, Elemental (Water)
+Range: Touch
+Duration: 4 rounds
+Casting Time: 2
+Area of Effect: Creature Touched
+Saving Throw: None
+
+Aurora Borealis, the spirit of the north, is channelled through the Auror's hands to the creature lucky enough to be bestowed upon this spell. The creature is bathe in a cool warmth, a feeling quite hard to describe, and is healed of any physical or mental illness. It calms the creature, effectively dispelling fear or anger. It also aids in the process of natural healing, granting additional 10 hit point, regeneration and +2 bonus to saving throws till the duration of the spell expires.
+
+Due to the nature of the spell, the Auror may feel lightheaded after casting and may need rest soon after.~
+
+@123=~Dire Frost
+(Alteration)
+
+Level: 2
+Sphere: Elemental (Water)
+Range: 100 yds.
+Duration: 1 hour
+Casting Time: 1 round
+Area of Effect: 5' radius around the creature targeted
+Saving Throw: Negates
+
+Upon casting this spell, the air around the targeted creature quickly drops to sub-zero temperatures, freezing instantly everything within its radius unless a successful save vs. death is made. Creatures who have not become frozen might still feel the freezing effects of this spell and are slowed by 1 turn. Fire elementals, Efreets or Salamanders must make a successful save vs. death or be killed instantly.
+
+This spell is normally used by Aurors in apprehending creatures. However, there are some accounts that this spell goes way below the temperature the Auror intended, causing instant death by freezing.~
+
+@124=~Hoarfrost
+(Conjuration)
+
+Level: 3
+Sphere: Elemental (Water)
+Range: Within the Auror's location
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 30'
+Saving Throw: Special
+
+Ice form dances on the Auror's hand. The caster then releases the crystalizing ice to the heavens to which comes hurling down as a giant comet, dealing 8d6 crushing and 2d4 cold damage. It shatters on hit and any creature who fails to save vs. breath is knocked away from the area of effect.~
+
+@125=~Lament of Winter
+(Necromancy)
+
+Level: 3
+Sphere: Death, Elemental (Water)
+Range: Personal
+Duration: Instantaneous
+Casting time: 2
+Area of Effect: 30'
+Saving Throw: Special
+
+The Auror sings the verse of the Lament and becomes a conduit of a deathly winter storm. Any creature who hears the song immediately suffers its adverse effects. Those who are with 12d hit dice and below are instantly slain. Others must save vs. death magic or be killed. Surviving creatures must endure the bitter cold brought about by the song, being frostbitten for the duration of the spell. Creatures who fail to save vs. spells are stricken with hallucinations, suffering uncontrollable fear or confusion for 6 rounds. This spell does not affect party members, though they might still feel uncomfortable, seeing the aftermath of this spell.
+
+The Auror must take caution when using this spell as it requires her life force to fuel its potency. At the end of the song, she is rendered physically and mentally exhausted, falling unconscious, unable to utter a word, making her vulnerable to enemy attacks. Due to the nature of this spell, the Auror can't recieve any recuperative aid for the duration of the spell's effect. A full day rest is likely needed for a full recovery.~
+
+@127=~<CHARNAME>'s Vestments~
+
+@128=~A simple robe worn by the Auror Bhaalspawn, <CHARNAME> during <PRO_HISHER> travels in Baldur's Gate. It is enchanted with standard Auror protections as well as an ability that is very similar to the wizard's 4th level spell, Improved Invisibility.
+
+STATISTICS:
+
+Bonuses: +30% bonus resistance to electricity, +20% bonus resistance to fire
+Saving Throw: +2 bonus vs. death
+Special Abilities:
+ Improved Invisibility: Three times per day.
+Weight: 3~

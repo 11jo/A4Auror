@@ -1,0 +1,8 @@
+// Irenicus' Dungeon 1st Floor
+IF
+   Global("A4AU_AddToAR0602","AR0602",0)
+THEN
+   RESPONSE #100
+      SetGlobal("A4AU_AddToAR0602","AR0602",1)
+      ActionOverride("Chest 7",CreateItem("A4AUITM0",0,0,0))
+END
