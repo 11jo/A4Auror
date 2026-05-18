@@ -1,6 +1,6 @@
 BACKUP ~A4Auror/backup~
 AUTHOR ~Aeviannce (http://www.shsforums.net/topic/37463-auror-kit-for-the-ranger-class/)~
-README ~A4Auror/Language/ENG/Readme-Auror_ENG.txt~
+README ~A4Auror/readme/Readme-Auror.%LANGUAGE%.txt~ ~A4Auror/readme/Readme-Auror.english.txt~
 
 /////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
@@ -17,7 +17,24 @@ README ~A4Auror/Language/ENG/Readme-Auror_ENG.txt~
 NO_IF_EVAL_BUG
 VERSION ~v4.04~
 
-LANGUAGE ~English~ ~english~ ~A4Auror/Language/ENG/A4Auror-Setup_ENG.tra~
+ALWAYS
+	ACTION_DEFINE_ARRAY Ad_reload BEGIN
+	"Setup.tra"
+	END
+	ACTION_DEFINE_ARRAY Ad_noconvert BEGIN END
+		LAF HANDLE_CHARSETS
+		INT_VAR
+		infer_charset = 1
+		STR_VAR
+		tra_path = EVAL ~%MOD_FOLDER%/Language~
+		noconvert_array = Ad_noconvert
+		reload_array = Ad_reload
+	END
+END
+  
+LANGUAGE ~English~ ~english~ ~A4Auror/Language/english/Setup.tra~
+
+LANGUAGE ~Francais~ ~french~ ~A4Auror/Language/french/Setup.tra~
 
 BEGIN @1
 
@@ -265,5 +282,9 @@ ADD_KIT ~A4AUROR~
  	SAY NAME2 @127
 	SAY DESC @128
 
- EXTEND_BOTTOM ~AR0602.bcs~   ~A4Auror/Item/A4AU0602.baf~     // irenicus dungeon 1st floor
+
+ACTION_IF (GAME_IS ~bg2ee eet~) THEN BEGIN
+ EXTEND_BOTTOM ~AR0602.bcs~   ~A4Auror/Item/A4AU0602.baf~    // irenicus dungeon 1st floor
  COMPILE ~A4Auror/Item/A4AU0602.baf~
+END
+	

@@ -1,0 +1,343 @@
+//Note: use "@x=~n~" where X is the number designation and n is the translation
+
+//Installer Text
+@1=~L'Auror : Kit de rodeuse pour BGII-TOB, BGII-EE, BG-EE et EET~
+@2=~Le jeu est detecte : Le jeu est conforme... Poursuite de l'installation~
+
+//Kit Desc
+@10=~AUROR~
+@11=~Auror~
+@12=~AUROR : Une rôdeuse plutôt singulière, compétente à l'arc et dotée d'une faculté remarquable pour contrôler les éléments associer à la glace et aux forces de l'hiver. Bien qu'on la prenne généralement pour une prêtresse d'Auril, l'Auror ne partage pas les tendances destructrices de la Fille du Gel et ses adeptes, au contraire elle applique rigoureusement la voie solitaire d'un dragon d'argent inconnue, connu pour être son hégémon.
+
+Entraîné à développer son agilité, l'Auror est particulièrement rapide et précise dans ses mouvements, mais cette caractéristique tient davantage de la nécessité que du privilège, car le long chemin à parcourir pour devenir Auror est éprouvant et affaiblit le corps. Mais cela ne l'empêche pas d'aider ceux qui sont dans le besoin. C'est une protectrice énigmatique de tout ce qui est bon en ce monde, mais aussi une glaciale et impitoyable ennemie de ceux qui empruntent la voie du mal.
+
+Avantages :
+
+- Immunité aux charmes et à la confusion.
+- Bonus de 2 à la dextérité à la création du personnage.
+- Bonus de 1 au THAC0 pour les Armes de trait tous les 4 niveaux.
+- Bonus de 1 au dégâts avec les armes de trait tous les 6 niveaux.
+- Peut lancer de sorts de prêtre supplémentaires à partir du niveau 14.
+- Gagne de 2 % de résistance à la magie à chaque monté de niveau; jusqu'au niveau 30.
+- Bonus de 1 à la classe d'armure contre les projectiles tous les 6 niveaux; jusqu'au niveau 30.
+- Peut atteindre la grande maîtrise avec les armes de trait : 5 points de compétence en Arc long et Arc court.
+- Bonus de 1 à la classe d'armure et aux jets de sauvegarde contre les souffles, tous les 3 niveaux; jusqu'au niveau 29.
+- Bonus de 1 aux jets de sauvegarde contre les sorts tous les 2 niveaux jusqu'au niveau 8, puis tous les 3 niveaux jusqu'au niveau 17, et enfin tous les 4 niveaux jusqu'au niveau 30.
+- Démarre avec 7 % de résistance au froid, et gagne 12 % de résistance supplémentaire tous les 2 niveaux jusqu'au niveau 10, ainsi qu'aux niveaux 13 et 16, puis 9 % au niveau 20 et 24, et enfin 7 % supplémentaire au niveau 29.
+
+- Tireuse d'élite : Démarre avec 1d19 chance de coup critique, et s'améliore tous les 6 niveaux ; jusqu'à atteindre 1d14 chance de coup critique au niveau 30.
+
+- Boule de cristal : à partir du niveau 4, l'Auror appréhende le monde qui l'entoure de manière surnaturelle. Ce qui lui permet de détecter et d'attaquer les ennemis dissimulés (sans pour autant les rendre visibles). Étant impossible à surprendre, elle devient immunisée aux attaques sournoises.
+
+- Caresse glacée : au niveau 6, à chaque attaque réussie, l'Auror inflige 2d4 points de dégâts de froid supplémentaires et gèle sa cible pendant 4 rounds (jet de sauvegarde contre les sorts pour éviter). Ses projectiles sont désormais chargés en énergie psionique qui renverse la cible si elle échoue à son jet de sauvegarde contre les souffles.
+
+-  Dons innés :
+
+   Niveau 2 : Zéro absolu - Lame de glace
+   Niveau 4 : Zéro absolu - Flèches givrées
+   Niveau 6 : Projection des sens
+   Niveau 8 : Le clin d'œil de l'hiver
+   Niveau 10 : La morsure de l'hiver
+   
+-  À partir du niveau 8, l'Auror développe de nouvelles aptitudes :
+
+   Niveau 8 : Aura glaciale
+   Niveau 10 : Déferlante de glace
+   Niveau 12 : Aurore boréale
+   Niveau 15 : Terrible hiver
+   Niveau 18 : Désolation glacée
+   Niveau 20 : Les lamentations de l'hiver
+
+Inconvénients :
+
+- Classe accessible uniquement aux humain, elfes et demi-elfes d'alignement neutre bon ou Chaotique bon.
+- Ne peut pas attribuer de point de compétence dans d'autres styles de combat que celui à deux armes.
+- Subit une pénalité de 1 à ses jets de sauvegarde contre la mort tous les 4 niveaux.
+- Est peu compétente avec un certain nombre d'armes de jet et de mêlée.
+- Malus de 6 à la constitution à la création du personnage.
+- Malus de 8 à la force à la création du personnage.
+- N'acquiert pas la capacité de charmer les animaux.
+- N'acquiert pas de capacité de haut niveau.
+- Ne peut pas porter d'armure.
+- Ne peut pas se jumeler.
+- Dés de vie : d4~
+
+//Innates Name
+@100=~Zéro absolu~
+@101=~Lame de glace~
+@102=~Lame de glace +1~
+@103=~Lame de glace +2~
+@104=~Lame de glace +3~
+@105=~Flèches givrées~
+@106=~Flèches givrées +1~
+@107=~Flèches givrées +2~
+@108=~Flèches givrées +3~
+@109=~Flèches givrées +4~
+@110=~Le clin d'œil de l'hiver~
+@111=~La morsure de l'hiver~
+
+//Innates Desc
+
+@129=~Ce don permet à l'Auror de façonner une épée ou un carquois rempli de flèches en glace.
+Cette capacité s'accroît avec l'expérience de l'Auror.~
+
+@130=~Création d'une lame de glace~
+
+@131=~Création de flèches givrées~
+
+@118=~Cette fine lame de glace cristalline a été façonnée par le don inné de l'Auror, le « Zéro absolu ». Elle est considérée comme magique et possède plusieurs niveau d'enchantement.
+
+PARAMÈTRES :
+
+Dégâts : 1d3+3
+TAC0 : +4
+Type de dégâts : Perforant
+Facteur de vitesse : 2
+Type de compétence : Épée longue
+Type : Armes à 1 main
+
+Poids : 1~
+
+@119=~Ces flèches ont été confectionnées grâce au don inné de l'Auror, le « Zéro absolu ». Elles sont entièrement en glace, mais possèdent les caractéristiques d'une flèche normale. Considérées comme magiques, elles possèdent plusieurs niveaux d'enchantement.
+
+PARAMÈTRES :
+
+Dégâts : 1d6
+Type de dégâts : Projectile ( perforant )
+Utilisable avec : Arc
+
+Poids : 0~
+
+@126=~Projection des sens~
+@134=~Les capacités psychiques de L'Auror lui permettent d'étendre son acuité sensorielle sur de larges distances et ainsi révéler des zones impossibles à voir à l'œil nu.~
+@132=~L'Auror peut disparaître dans un tourbillon de glace, et réapparaître n'importe où dans une zone.~
+@133=~L'Auror peut amplifier ses attaques avec de l'énergie psionique. Pendant 4 rounds, toute attaque à distance éclatera à l'impact, infligeant :
+
+- 1d4 dégâts d'étourdissement 
+- 2d4 dégâts de froid, +1 point de dégâts supplémentaires tout les 3 niveaux. 
+
+L'utilisation de cette capacité entraîne une pénalité de -2 à sa vitesse d'attaque.~
+
+//Spells Name
+@112=~Aura glaciale~
+@113=~Déferlante de glace~
+@114=~Aurore boréale~
+@115=~Terrible hiver~
+@116=~Désolation glacée~
+@117=~Les lamentations de l'hiver~
+
+//Spells Desc
+@120=~Aura glaciale
+(Conjuration)
+
+Niveau : 1
+Sphère : Élémentaire (Eau)
+Portée : Personnelle
+Durée : 1 heure par niveau
+Temps d'incantation : 1 round
+Zone d'effet : 4,5 m
+Jet de sauvegarde : Spécial
+
+L'Auror s'entoure d'une aura bleutée l'immunisant contre les armes normales. Tous les ennemis situés dans un rayon de  4,5 m autour du jeteur de sorts subissent des dégâts de froid et sont ralentis pendant 1 round, à moins de réussir un jet de sauvegarde contre les souffles.~
+
+@121=~Déferlante de glace
+(Évocation)
+
+Niveau : 1
+Sphère : Élémentaire (Eau)
+Portée : Personnelle
+Durée : instantanée
+Temps d'incantation : instantané
+Zone d'effet : 6 m
+Jet de sauvegarde : Spécial
+
+L'Auror déclenche psychiquement une vague de froid tout autour d'elle, envoyant valser les ennemis à proximité, à moins de réussir un jet de sauvegarde contre les souffles. La puissance générée inflige 1d6 points de dégâts d'étourdissement et 2d8 points de dégâts de froid. L'Auror a un contrôle total sur son sort et ne blesse pas les créatures qu'elle estime amicales.~
+
+@122=~Aurore boréale
+(Conjuration)
+
+Niveau : 2
+Sphère : Guérison, Élémentaire (Eau)
+Portée : contact
+Durée : 4 rounds
+Temps d'incantation : 2
+Zone d'effet : 1 créature
+Jet de sauvegarde : aucun
+
+Aurore boréale, l'esprit du Grand Nord, est canalisé dans les mains de l'Auror pour être transmis à la créature qui aura la chance d'en bénéficier. Celle-ci est alors baignée dans une douce tiédeur, une sensation difficile à décrire, qui guérit toutes les maladies, quelles soient physiques ou mentales. Ce sort calme egalement la créature, dissipant efficacement la peur et la colère. 
+Aurore boréale participe activement au processus de guérison naturelle de la cible, lui accordant 10 points de vie supplémentaires, une capacité de régénération et un bonus de 2 à ses jets de sauvegarde jusqu'à que le sortilège expire.
+
+En raison de la nature de ce sort, l'Auror peut se sentir étourdie et avoir besoin de se reposer.~
+
+@123=~Terrible hiver
+(Altération)
+
+Niveau : 2
+Sphère : Élémentaire (Eau)
+Portée : 90 m
+Durée : 1 heure
+Temps d'incantation : 1 round
+Zone d'effet : rayon de 1,5 m autour de la créature ciblée
+Jet de sauvegarde : annule
+
+Lorsque Terrible hiver est lancer, la température de l'air autour de la créature ciblée chute rapidement au-dessous de zéro, gelant instantanément tout ce qui se trouve dans son périmètre, à moins de réussir un jet de sauvegarde contre la mort. 
+Les créatures qui n'ont pas été figées peuvent quand même en ressentir les effets et sont ralenties pendant un tour. 
+Les élémentaires de feu, les Efrits et les Salamandres doivent réussir un jet de sauvegarde contre la mort ou être instantanément tués.
+
+Ce sort est normalement utilisé par les Aurors pour capturer des créatures. Cependant, il arrive que celui-ci tombe bien en dessous de la température prévue, provoquant ainsi une mort instantanée par congélation.~
+
+@124=~Désolation glacée
+(Conjuration)
+
+Niveau : 3
+Sphère : Élémentaire (Eau)
+Portée : l'emplacement de l'Auror
+Durée : instantanée
+Temps d'incantation : 4
+Zone d'effet : 9 m
+Jet de sauvegarde : Spécial
+
+L'Auror materialise un cristal de glace dans sa main et le projette vers les cieux, afin qu'il retombe telle une gigantesque comète, infligeant 8d6 points de dégâts écrasants et 2d4 points de dégâts de froid. 
+Le cristal se brise à l'impact et toute créature qui ne réussit pas son jet de sauvegarde contre les souffles est projetée hors de la zone d'effet.~
+
+@125=~Les lamentations de l'hiver
+(Nécromancie)
+
+Niveau : 3
+Sphère : Nécromancie, Élémentaire (Eau)
+Portée : Personnelle
+Durée : instantanée
+Temps d'incantation : 2
+Zone d'effet : 9 m
+Jet de sauvegarde : Spécial
+
+Quand l'Auror entonne la complainte de l'hiver, elle devient le vecteur d'une tempête glaciale et meurtrière. Toute créature qui entend la mélodie en subit immédiatement les néfastes conséquences. 
+Celles qui ont 12 Dés de vie ou moins sont instantanément tuées. Les autres doivent réussir un jet de sauvegarde contre la mort magique ou être tuées à leur tour. 
+Les survivants doivent alors endurer le froid glacial provoqué par la chanson, et sont gelées pendant la durée du sort. Les créatures qui échouent à leur jet de sauvegarde contre les sorts sont alors frappées d'hallucinations, subissant terreur et confusion pendant 6 rounds.
+
+Ce sort n'affecte pas les membres du groupe, bien qu'ils puissent éprouver des remords en constatant les conséquences de ce maléfice.
+
+L'Auror doit utiliser ce sort avec prudence car il puise dans sa force vitale pour l'alimenter en puissance. A la fin de la chanson, épuisée physiquement et psychiquement, elle tombe inconsciente, incapable de prononcer un seul mot, ce qui la rend vulnérable aux potentielles attaques ennemies.
+En raison de sa nature, l'Auror ne peut pas recevoir aucune aide pendant la durée du sort et une journée entière de repos sera probablement nécessaire pour une récupération complète.~
+
+@127=~Vêtements de <CHARNAME>.~
+
+@128=~Une robe toute simple portée par <CHARNAME>, l'Auror enfant de Bhaal, lors de ses voyages à Porte de Baldur. Elle est dotée des protections classiques conférées aux Aurors ainsi que d'une capacité similaire au sort de mage de 4e niveau, Invisibilité améliorée.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Résistance au feu : +20 %
+- Résistance à l'électricité : +30 %
+Jet de sauvegarde : bonus de 2 contre la paralysie, la mort et les poisons
+
+Capacités de charge :
+ Invisibilité majeure : 3 fois par jour.
+ 
+Poids : 3~
+
+
+/* =============== *
+ *  WeiDU prompts  *
+ * =============== */
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat anterieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
+
+@-1040= "
+Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
+Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
+faudra editer le fichier weidu.conf et reinstaller vos mods.
+"
+@-1041= "Tcheque"
+@-1042= "Allemand"
+@-1043= "Anglais"
+@-1044= "Espagnol"
+@-1045= "Francais"
+@-1046= "Italien"
+@-1047= "Polonais"
+@-1048= "Portugais"
+@-1049= "Turc"
+@-1050= "Japonais"
+@-1051= "Coreen"
+@-1052= "Chinois simplifie"
+@-1053= "Russe"
+@-1054= "Ukrainien"
+
+@-1060= "
+Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
+
+Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
+"
+@-1061= "
+Utilisation de"
+@-1062= " et "
+
+@-1063= "INSTALLATION ABANDONNEE"
+@-1064= "Abandon de l'installation de ["
+@-1065= "], retour a l'etat anterieur"
+
+
+
+
+
