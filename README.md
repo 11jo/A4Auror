@@ -54,7 +54,7 @@ Anyway, thank you again and I hope you enjoy playing as an Auror. cheers! :D
 ## Version History:
 ----------------
 
-Version 4.5
+- Version 4.5  
 	- Mod review by @RiwsPy
 	- Update tp2 
 	- Designated
@@ -63,17 +63,17 @@ Version 4.5
 	- WeiduModPackager  
 	- ini  
 
-Version 4.4.2
+- Version 4.4.2  
 	- Uprade fl#add_kit_ee 2016 edition to 2017 edition for better EET compatibility
 	- Add French translation.
 	- Correct items proficiency.
 	- Handle Charset.
 
-Version 4.4.1
+- Version 4.4.1  
 	- Compatibility with BGII-EE and BGII-TOB
 	- Fixed typo errors and added proper descriptions on kit, items and spells.
 
-Version 4.04
+- Version 4.04  
 	- Thac0 bonus for missile weapons changed from +1 every 2 levels to +1 every 4 levels.
 	- Damage bonus for missile weapons changed from +1 every 4 levels to +1 every 6 levels.
 	- AC bonus vs. Missles changed from +1 every 5 levels to +1 every 6 levels, caps at the 30th level.
@@ -83,7 +83,7 @@ Version 4.04
 	- Removed leftover effects during testing from spells
 	- Decreased hp gained per level to 1d4 (EE only).
 
-Version 4.03
+- Version 4.03  
 	- Thac0 bonus for missile weapons changed from +2 every 4 levels to +1 every 2 levels.
 	- Increased save vs. spells bonus to +1 every 2 levels.
 	- Added Foresight ability. She can now detect invisible creatures, though they are still invisible (invisible detection by script) and is immune to backstab.
@@ -100,12 +100,12 @@ Version 4.03
 	- Reduced Lament of Winter's casting time to 2 seconds.
 	- Lament of Winter's side effect now prevents the caster from getting healed for 1 turn.
 
-Version 4.02
+- Version 4.02  
 	- Improved Ice Arrow ability. It will now function similar to a quiver of plenty though the duration is lessen to 8 hours.
 	- Decreased Ice Blade duration to 8 hours.
 	- Correction on the mod version. Sorry, I forgot the extra zero. :S
 
-Version 4.01
+- Version 4.01  
 	- Fixed some typos and improved some descriptions.
 	- Improved buffet distance curve per level for Frost Wave.
 	- Aurora Borealis now increases in regeneration and hp bonus depending on the level of its caster.
@@ -113,14 +113,14 @@ Version 4.01
 	- Reworked Hoarfrost to deal more damage by level of caster and harm party members.
 	- Added Far Sense innate ability. Effects are the same as Farsight albeit shorter duration.
 
-Version 4.0
+- Version 4.0  
 	- Too many to put into detail.
 
-Version 3.0
+- Version 3.0  
 	- Not released.
 
-Version 2.0
+- Version 2.0  
 	- Not released.
 
-Version 1.0
+- Version 1.0  
 	- First release.
