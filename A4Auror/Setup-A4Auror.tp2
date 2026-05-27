@@ -1,5 +1,7 @@
-BACKUP ~A4Auror/backup~
+BACKUP ~weidu_external/A4Auror/backup~
+
 AUTHOR ~Aeviannce (http://www.shsforums.net/topic/37463-auror-kit-for-the-ranger-class/)~
+
 README ~A4Auror/readme/Readme-Auror.%LANGUAGE%.txt~ ~A4Auror/readme/Readme-Auror.english.txt~
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -14,32 +16,56 @@ README ~A4Auror/readme/Readme-Auror.%LANGUAGE%.txt~ ~A4Auror/readme/Readme-Auror
 /////////////////////////////////////////////////////////////////////////////////////
 
 //MODDER
-NO_IF_EVAL_BUG
-VERSION ~v4.04~
+// NO_IF_EVAL_BUG
+
+VERSION ~v4.5~
 
 ALWAYS
-	ACTION_DEFINE_ARRAY Ad_reload BEGIN
-	"Setup.tra"
-	END
-	ACTION_DEFINE_ARRAY Ad_noconvert BEGIN END
-		LAF HANDLE_CHARSETS
-		INT_VAR
-		infer_charset = 1
-		STR_VAR
-		tra_path = EVAL ~%MOD_FOLDER%/Language~
-		noconvert_array = Ad_noconvert
-		reload_array = Ad_reload
-	END
-END
-  
-LANGUAGE ~English~ ~english~ ~A4Auror/Language/english/Setup.tra~
 
-LANGUAGE ~Francais~ ~french~ ~A4Auror/Language/french/Setup.tra~
+	DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
+	COPY ~A4Auror/Language/english~				~weidu_external/A4Auror/Language/autotra/%LANGUAGE%~
+	COPY ~A4Auror/Language/%LANGUAGE%~				~weidu_external/A4Auror/Language/autotra/%LANGUAGE%~
+	END
+
+	LAF autotra_workaround END
+
+	ACTION_IF GAME_IS ~bgee bg2ee eet~ BEGIN
+
+//			ACTION_DEFINE_ARRAY A4_noconvert BEGIN END
+
+		ACTION_DEFINE_ARRAY A4_reload BEGIN Setup END
+			LAF HANDLE_CHARSETS
+				INT_VAR
+				infer_charsets = 1
+//				from_utf8      = 1
+				STR_VAR
+				tra_path = EVAL ~weidu_external/A4Auror/Language/autotra~
+				out_path = EVAL ~weidu_external/A4Auror/Language/autotra~
+				iconv_path = ~A4Auror/Language/autotra/iconv~
+//				noconvert_array = A4_noconvert
+				reload_array = A4_reload
+			END
+
+	END 
+END
+
+AUTO_TRA ~weidu_external/A4Auror/Language/autotra/%s~
+  
+LANGUAGE ~English~
+		 ~english~
+		 ~A4Auror/Language/english/Setup.tra~
+
+LANGUAGE ~Francais~
+		 ~french~
+		 ~A4Auror/Language/french/Setup.tra~
 
 BEGIN @1
+DESIGNATED 0
+LABEL ~Aeviannce-A4Auror~
+REQUIRE_PREDICATE GAME_IS ~tob bgee bg2ee eet bgt~ ~This mod need BG2, BG2EE, BGT or EET~
 
 //Checks for BGII-EE Installation
-REQUIRE_PREDICATE (NOT GAME_IS ~iwd iwd2 how totlm pst bg1 totsc~) @2 //Check if game is compatible
+// REQUIRE_PREDICATE (NOT GAME_IS ~iwd iwd2 how totlm pst bg1 totsc~) @2 //Check if game is compatible
 
 //internal name of the kit
 ADD_KIT ~A4AUROR~
@@ -89,7 +115,8 @@ ADD_KIT ~A4AUROR~
  SAY @12
  
  // Call EE compatibility patch
- ACTION_IF (NOT GAME_IS ~soa tob tutu tutu_totsc bgt ca iwd_in_bg2~) BEGIN
+// ACTION_IF (NOT GAME_IS ~soa tob tutu tutu_totsc bgt ca iwd_in_bg2~) BEGIN
+ ACTION_IF (GAME_IS ~bgee bg2ee eet~) BEGIN
  
  // EE compatibility patch, updated version by Subtledoctor
          INCLUDE ~A4Auror/lib/fl#add_kit_ee.tpa~
@@ -180,21 +207,53 @@ ADD_KIT ~A4AUROR~
 
  ADD_PROJECTILE ~A4Auror/Projectile/A4AUP00.pro~
  COPY ~A4Auror/Innate/A4AUI02A.spl~ ~override~
- 	WRITE_SHORT   0x98 ~%A4AUP00%~
+//	WRITE_SHORT   0x98 ~%A4AUP00%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP00%~
+	END
  COPY ~A4Auror/Innate/A4AUI02B.spl~ ~override~
- 	WRITE_SHORT   0x98 ~%A4AUP00%~
+//	WRITE_SHORT   0x98 ~%A4AUP00%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP00%~
+	END
  COPY ~A4Auror/Innate/A4AUI02C.spl~ ~override~
-	WRITE_SHORT   0x98 ~%A4AUP00%~
+//	WRITE_SHORT   0x98 ~%A4AUP00%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP00%~
+	END
  COPY ~A4Auror/Innate/A4AUI02D.spl~ ~override~
- 	WRITE_SHORT   0x98 ~%A4AUP00%~
+//	WRITE_SHORT   0x98 ~%A4AUP00%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP00%~
+	END
  COPY ~A4Auror/Innate/A4AUI02E.spl~ ~override~
- 	WRITE_SHORT   0x98 ~%A4AUP00%~
+//	WRITE_SHORT   0x98 ~%A4AUP00%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP00%~
+	END
  COPY ~A4Auror/Innate/A4AUI02F.spl~ ~override~
-	WRITE_SHORT   0x98 ~%A4AUP00%~
+//	WRITE_SHORT   0x98 ~%A4AUP00%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP00%~
+	END
  COPY ~A4Auror/Innate/A4AUI02G.spl~ ~override~
- 	WRITE_SHORT   0x98 ~%A4AUP00%~
+//	WRITE_SHORT   0x98 ~%A4AUP00%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP00%~
+	END
  COPY ~A4Auror/Innate/A4AUI02H.spl~ ~override~
- 	WRITE_SHORT   0x98 ~%A4AUP00%~
+//	WRITE_SHORT   0x98 ~%A4AUP00%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP00%~
+	END
 
  COPY ~A4Auror/Innate/A4AUI03.spl~ ~override~
  	SAY NAME1 @126
@@ -215,31 +274,64 @@ ADD_KIT ~A4AUROR~
 
  ADD_PROJECTILE ~A4Auror/Projectile/A4AUP02.pro~
  COPY ~A4Auror/Spell/A4AUS00A.spl~ ~override~
- 	WRITE_SHORT   0x98 ~%A4AUP02%~
+//	WRITE_SHORT   0x98 ~%A4AUP02%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP02%~
+	END
  COPY ~A4Auror/Spell/A4AUS00B.spl~ ~override~
-  	WRITE_SHORT   0x98 ~%A4AUP02%~
+//	WRITE_SHORT   0x98 ~%A4AUP02%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP02%~
+	END
  COPY ~A4Auror/Spell/A4AUS00C.spl~ ~override~
-  	WRITE_SHORT   0x98 ~%A4AUP02%~
+//	WRITE_SHORT   0x98 ~%A4AUP02%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP02%~
+	END
  COPY ~A4Auror/Spell/A4AUS00D.spl~ ~override~
-  	WRITE_SHORT   0x98 ~%A4AUP02%~
+//	WRITE_SHORT   0x98 ~%A4AUP02%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP02%~
+	END
  COPY ~A4Auror/Spell/A4AUS00E.spl~ ~override~
-  	WRITE_SHORT   0x98 ~%A4AUP02%~
+//	WRITE_SHORT   0x98 ~%A4AUP02%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP02%~
+	END
  COPY ~A4Auror/Spell/A4AUS00F.spl~ ~override~
-  	WRITE_SHORT   0x98 ~%A4AUP02%~
+//	WRITE_SHORT   0x98 ~%A4AUP02%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP02%~
+	END
  COPY ~A4Auror/Spell/A4AUS00G.spl~ ~override~
-  	WRITE_SHORT   0x98 ~%A4AUP02%~
+//	WRITE_SHORT   0x98 ~%A4AUP02%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			projectile  = EVAL  ~%A4AUP02%~
+	END
  
  ADD_PROJECTILE ~A4Auror/Projectile/A4AUP01.pro~ 
  COPY ~A4Auror/Spell/A4AUS01.spl~ ~override~
   	SAY NAME1 @113
 	SAY UNIDENTIFIED_DESC @121
-	WRITE_SHORT   0x98 ~%A4AUP01%~
-	WRITE_SHORT   0xc0 ~%A4AUP01%~
-	WRITE_SHORT   0xe8 ~%A4AUP01%~
-	WRITE_SHORT   0x110 ~%A4AUP01%~
-	WRITE_SHORT   0x138 ~%A4AUP01%~
-	WRITE_SHORT   0x160 ~%A4AUP01%~
-	WRITE_SHORT   0x188 ~%A4AUP01%~
+//	WRITE_SHORT   0x98 ~%A4AUP01%~
+//	WRITE_SHORT   0xc0 ~%A4AUP01%~
+//	WRITE_SHORT   0xe8 ~%A4AUP01%~
+//	WRITE_SHORT   0x110 ~%A4AUP01%~
+//	WRITE_SHORT   0x138 ~%A4AUP01%~
+//	WRITE_SHORT   0x160 ~%A4AUP01%~
+//	WRITE_SHORT   0x188 ~%A4AUP01%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			check_headers = 1 // 1 All headers : 0 None header
+			projectile  = EVAL  ~%A4AUP01%~
+	END
 
  COPY ~A4Auror/Spell/A4AUS02.spl~ ~override~
 	SAY NAME1 @114
@@ -249,31 +341,46 @@ ADD_KIT ~A4AUROR~
  COPY ~A4Auror/Spell/A4AUS03.spl~ ~override~
 	SAY NAME1 @115
 	SAY UNIDENTIFIED_DESC @123
-	WRITE_SHORT   0x98 ~%A4AUP03%~
-	WRITE_SHORT   0xc0 ~%A4AUP03%~
-	WRITE_SHORT   0xe8 ~%A4AUP03%~
-	WRITE_SHORT   0x110 ~%A4AUP03%~
-	WRITE_SHORT   0x138 ~%A4AUP03%~
-	WRITE_SHORT   0x160 ~%A4AUP03%~
-	WRITE_SHORT   0x188 ~%A4AUP03%~
+//	WRITE_SHORT   0x98 ~%A4AUP03%~
+//	WRITE_SHORT   0xc0 ~%A4AUP03%~
+//	WRITE_SHORT   0xe8 ~%A4AUP03%~
+//	WRITE_SHORT   0x110 ~%A4AUP03%~
+//	WRITE_SHORT   0x138 ~%A4AUP03%~
+//	WRITE_SHORT   0x160 ~%A4AUP03%~
+//	WRITE_SHORT   0x188 ~%A4AUP03%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			check_headers = 1
+			projectile  = EVAL  ~%A4AUP03%~
+	END
 
  ADD_PROJECTILE ~A4Auror/Projectile/A4AUP04.pro~ 
  COPY ~A4Auror/Spell/A4AUS04.spl~ ~override~
 	SAY NAME1 @116
 	SAY UNIDENTIFIED_DESC @124
-	WRITE_SHORT   0x98 ~%A4AUP04%~
-	WRITE_SHORT   0xc0 ~%A4AUP04%~
-	WRITE_SHORT   0xe8 ~%A4AUP04%~
-	WRITE_SHORT   0x110 ~%A4AUP04%~
-	WRITE_SHORT   0x138 ~%A4AUP04%~
+//	WRITE_SHORT   0x98 ~%A4AUP04%~
+//	WRITE_SHORT   0xc0 ~%A4AUP04%~
+//	WRITE_SHORT   0xe8 ~%A4AUP04%~
+//	WRITE_SHORT   0x110 ~%A4AUP04%~
+//	WRITE_SHORT   0x138 ~%A4AUP04%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			check_headers = 1 
+			projectile  = EVAL  ~%A4AUP04%~
+	END
 
  ADD_PROJECTILE ~A4Auror/Projectile/A4AUP05.pro~
  COPY ~A4Auror/Spell/A4AUS05.spl~ ~override~
 	SAY NAME1 @117
 	SAY UNIDENTIFIED_DESC @125
-	WRITE_SHORT   0x98 ~%A4AUP05%~
-	WRITE_SHORT   0xc0 ~%A4AUP05%~
-	WRITE_SHORT   0xe8 ~%A4AUP05%~
+//	WRITE_SHORT   0x98 ~%A4AUP05%~
+//	WRITE_SHORT   0xc0 ~%A4AUP05%~
+//	WRITE_SHORT   0xe8 ~%A4AUP05%~
+	LPF ALTER_SPELL_HEADER
+		INT_VAR
+			check_headers = 1
+			projectile  = EVAL  ~%A4AUP05%~
+	END
  
  COPY ~A4Auror/Spell/A4AUS05Z.spl~ ~override~
  
@@ -283,8 +390,8 @@ ADD_KIT ~A4AUROR~
 	SAY DESC @128
 
 
-ACTION_IF (GAME_IS ~bg2ee eet~) THEN BEGIN
- EXTEND_BOTTOM ~AR0602.bcs~   ~A4Auror/Item/A4AU0602.baf~    // irenicus dungeon 1st floor
- COMPILE ~A4Auror/Item/A4AU0602.baf~
+ACTION_IF (GAME_IS ~tob bgt bg2ee eet~) THEN BEGIN
+ EXTEND_BOTTOM ~AR0602.bcs~	~A4Auror/Item/A4AU0602.baf~    // irenicus dungeon 1st floor
+// COMPILE ~A4Auror/Item/A4AU0602.baf~
 END
 	
