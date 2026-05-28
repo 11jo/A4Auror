@@ -78,7 +78,15 @@ Inconvénients :
 
 //Innates Desc
 
-@129=~Ce don permet à l'Auror de façonner une épée ou un carquois rempli de flèches en glace.
+@129=~Zéro absolu
+
+Portée : Contact
+Durée : Instantanée
+Temps d'incantation : 0
+Zone d'effet : Le lanceur
+Jet de sauvegarde : Aucun
+
+Ce don permet à l'Auror de façonner une épée ou un carquois de 5 flèches givrées.
 Cette capacité s'accroît avec l'expérience de l'Auror.~
 
 @130=~Création d'une lame de glace~
@@ -89,12 +97,17 @@ Cette capacité s'accroît avec l'expérience de l'Auror.~
 
 PARAMÈTRES :
 
-Dégâts : 1d3+3
+Capacités d'équipement : 
+- Attaque par round : Passe à 3
+
 TAC0 : +4
-Type de dégâts : Perforant
+Dégâts : 1d3+3 (Perforant)
 Facteur de vitesse : 2
 Type de compétence : Épée longue
-Type : Armes à 1 main
+Type : Arme à 1 main
+
+Nécessite : 
+- 16 en Charisme
 
 Poids : 1~
 
@@ -102,21 +115,52 @@ Poids : 1~
 
 PARAMÈTRES :
 
-Dégâts : 1d6
-Type de dégâts : Projectile ( perforant )
-Utilisable avec : Arc
+Dégâts : 1d6 (Projectile)
+Arme de trait : Arc
+
+Nécessite : 
+- 17 en Dextérité
+- 16 en Charisme
 
 Poids : 0~
 
 @126=~Projection des sens~
-@134=~Les capacités psychiques de L'Auror lui permettent d'étendre son acuité sensorielle sur de larges distances et ainsi révéler des zones impossibles à voir à l'œil nu.~
-@132=~L'Auror peut disparaître dans un tourbillon de glace, et réapparaître n'importe où dans une zone.~
-@133=~L'Auror peut amplifier ses attaques avec de l'énergie psionique. Pendant 4 rounds, toute attaque à distance éclatera à l'impact, infligeant :
+@134=~Projection des sens
+(Divination)
 
-- 1d4 dégâts d'étourdissement 
-- 2d4 dégâts de froid, +1 point de dégâts supplémentaires tout les 3 niveaux. 
+Portée : Contact
+Durée : 2 rounds + 1 round par tranche de 3 niveaux
+Temps d'incantation : 0
+Zone d'effet : Le lanceur
+Jet de sauvegarde : Aucun
 
-L'utilisation de cette capacité entraîne une pénalité de -2 à sa vitesse d'attaque.~
+Les capacités psychiques de l'Auror lui permettent d'étendre son acuité sensorielle sur de larges distances et ainsi révéler des zones impossibles à voir à l'œil nu.~
+@132=~Le clin d'œil de l'hiver
+(Altération)
+
+Portée : 275 mètres
+Durée : 1 seconde
+Temps d'incantation : 0
+Zone d'effet : Point dans le champ visuel du lanceur
+Jet de sauvegarde : Aucun
+
+L'Auror peut disparaître dans un tourbillon de glace, et réapparaître n'importe où dans une zone.~
+@133=~La morsure de l'hiver
+(Enchantement)
+
+Portée : Contact
+Durée : 4 rounds
+Temps d'incantation : 0
+Zone d'effet : Le lanceur
+Jet de sauvegarde : Aucun
+
+L'Auror peut amplifier ses attaques avec de l'énergie psionique. Pendant 4 rounds, toute attaque à distance éclatera à l'impact, infligeant des dégâts à la cible et aux ennemis dans un rayon de 1,5 mètres :
+
+- 2d4 dégâts de froid, +1 point de dégâts supplémentaires tous les 3 niveaux (jet de sauvegarde contre les souffles pour réduire de moitié)
+- 1d4 dégâts non-létaux, +1 point de dégâts supplémentaires tous les 3 niveaux
+
+L'utilisation de cette capacité entraîne une pénalité de -2 à sa vitesse d'attaque.
+L'effet n'est pas cumulable.~
 
 //Spells Name
 @112=~Aura glaciale~
@@ -134,35 +178,36 @@ Niveau : 1
 Sphère : Élémentaire (Eau)
 Portée : Personnelle
 Durée : 1 heure par niveau
-Temps d'incantation : 1 round
-Zone d'effet : 4,5 m
+Temps d'incantation : 9
+Zone d'effet : 4,5 mètres
 Jet de sauvegarde : Spécial
 
-L'Auror s'entoure d'une aura bleutée l'immunisant contre les armes normales. Tous les ennemis situés dans un rayon de  4,5 m autour du jeteur de sorts subissent des dégâts de froid et sont ralentis pendant 1 round, à moins de réussir un jet de sauvegarde contre les souffles.~
+L'Auror s'entoure d'une aura bleutée l'immunisant contre les armes normales. Tous les ennemis situés dans un rayon de 4,5 mètres autour du jeteur de sorts subissent 1d8 dégâts de froid et sont ralentis, subissent une pénalité de 2 à la classes d'armure, aux jets d'attaques et aux jets de sauvegarde contre les souffles pendant 1 round, à moins de réussir un jet de sauvegarde contre les sorts à +2.
+L'effet n'est pas cumulable.~
 
 @121=~Déferlante de glace
 (Évocation)
 
 Niveau : 1
 Sphère : Élémentaire (Eau)
-Portée : Personnelle
-Durée : instantanée
-Temps d'incantation : instantané
-Zone d'effet : 6 m
+Portée : Contact
+Durée : Spéciale
+Temps d'incantation : 1
+Zone d'effet : Les créatures hostiles dans un rayon de 3 mètres autour du lanceur
 Jet de sauvegarde : Spécial
 
-L'Auror déclenche psychiquement une vague de froid tout autour d'elle, envoyant valser les ennemis à proximité, à moins de réussir un jet de sauvegarde contre les souffles. La puissance générée inflige 1d6 points de dégâts d'étourdissement et 2d8 points de dégâts de froid. L'Auror a un contrôle total sur son sort et ne blesse pas les créatures qu'elle estime amicales.~
+L'Auror déclenche psychiquement une vague de froid tout autour d'elle, envoyant valser les ennemis dans la zone d'effet, à moins de réussir un jet de sauvegarde contre les souffles à -4. La puissance générée inflige 2d8 points de dégâts de froid et 1d6 points de dégâts non-létaux. De plus, les cibles sont ralenties pendant 4 rounds (jet de sauvegarde contre les souffles pour annuler). Les créatures ralenties subissent une pénalité de 2 à la classe d'armure, aux jets d'attaques et aux jets de sauvegarde contre les souffles. Les dégâts et le malus aux jets de sauvegarde augmentent de 1 point tous les 3 niveaux, à partir du niveau 12. L'Auror a un contrôle total sur son sort et ne blesse pas les créatures qu'elle estime amicales.~
 
 @122=~Aurore boréale
 (Conjuration)
 
 Niveau : 2
 Sphère : Guérison, Élémentaire (Eau)
-Portée : contact
+Portée : Contact
 Durée : 4 rounds
 Temps d'incantation : 2
 Zone d'effet : 1 créature
-Jet de sauvegarde : aucun
+Jet de sauvegarde : Aucun
 
 Aurore boréale, l'esprit du Grand Nord, est canalisé dans les mains de l'Auror pour être transmis à la créature qui aura la chance d'en bénéficier. Celle-ci est alors baignée dans une douce tiédeur, une sensation difficile à décrire, qui guérit toutes les maladies, quelles soient physiques ou mentales. Ce sort calme egalement la créature, dissipant efficacement la peur et la colère. 
 Aurore boréale participe activement au processus de guérison naturelle de la cible, lui accordant 10 points de vie supplémentaires, une capacité de régénération et un bonus de 2 à ses jets de sauvegarde jusqu'à que le sortilège expire.
@@ -174,15 +219,16 @@ En raison de la nature de ce sort, l'Auror peut se sentir étourdie et avoir beso
 
 Niveau : 2
 Sphère : Élémentaire (Eau)
-Portée : 90 m
+Portée : 90 mètres
 Durée : 1 heure
-Temps d'incantation : 1 round
-Zone d'effet : rayon de 1,5 m autour de la créature ciblée
-Jet de sauvegarde : annule
+Temps d'incantation : 9
+Zone d'effet : Rayon de 2 mètres autour de la créature ciblée
+Jet de sauvegarde : Annule
 
-Lorsque Terrible hiver est lancer, la température de l'air autour de la créature ciblée chute rapidement au-dessous de zéro, gelant instantanément tout ce qui se trouve dans son périmètre, à moins de réussir un jet de sauvegarde contre la mort. 
-Les créatures qui n'ont pas été figées peuvent quand même en ressentir les effets et sont ralenties pendant un tour. 
-Les élémentaires de feu, les Efrits et les Salamandres doivent réussir un jet de sauvegarde contre la mort ou être instantanément tués.
+Lorsque Terrible hiver est lancé, la température de l'air autour de la créature ciblée chute rapidement au-dessous de zéro, gelant instantanément tout ce qui se trouve dans son périmètre pendant 6 tours à moins de réussir un jet de sauvegarde contre la mort à -2.
+Les créatures qui ont survécues doivent réussir un jet de sauvegarde contre les souffles à -4 ou ressentir ces effets pendant un tour : ralentissement, pénalité de 4 à la classe d'armure, aux jets d'attaques ainsi qu'aux jets de sauvegarde contre le souffle.
+Les élémentaires de feu, les Efrits et les Salamandres doivent réussir un jet de sauvegarde contre la mort à -8 ou être instantanément tués.
+Le malus aux jets de sauvegarde augmentent de 1 point tous les deux niveaux à partir du niveau 17.
 
 Ce sort est normalement utilisé par les Aurors pour capturer des créatures. Cependant, il arrive que celui-ci tombe bien en dessous de la température prévue, provoquant ainsi une mort instantanée par congélation.~
 
@@ -191,34 +237,34 @@ Ce sort est normalement utilisé par les Aurors pour capturer des créatures. Cepe
 
 Niveau : 3
 Sphère : Élémentaire (Eau)
-Portée : l'emplacement de l'Auror
+Portée : 275 mètres
 Durée : instantanée
 Temps d'incantation : 4
-Zone d'effet : 9 m
+Zone d'effet : Rayon de 4,5 mètres
 Jet de sauvegarde : Spécial
 
-L'Auror materialise un cristal de glace dans sa main et le projette vers les cieux, afin qu'il retombe telle une gigantesque comète, infligeant 8d6 points de dégâts écrasants et 2d4 points de dégâts de froid. 
-Le cristal se brise à l'impact et toute créature qui ne réussit pas son jet de sauvegarde contre les souffles est projetée hors de la zone d'effet.~
+L'Auror materialise un cristal de glace dans sa main et le projette vers les cieux, afin qu'il retombe telle une gigantesque comète, infligeant 2d6 points de dégâts contondants (+1d6 contondants par tranche de 3 niveaux du lanceur) et 2d4 points de dégâts de froid (+2d4 de froid par tranche de 2 niveaux du lanceur, à partir du niveau 21).
+Le cristal se brise à l'impact et toute créature qui ne réussit pas son jet de sauvegarde contre les souffles est projetée hors de la zone d'effet puis assomée pendant 1 round (jet de sauvegarde contre la mort à -8 pour annuler).~
 
 @125=~Les lamentations de l'hiver
 (Nécromancie)
 
 Niveau : 3
 Sphère : Nécromancie, Élémentaire (Eau)
-Portée : Personnelle
-Durée : instantanée
+Portée : Contact
+Durée : Spéciale
 Temps d'incantation : 2
-Zone d'effet : 9 m
+Zone d'effet : Les créatures hostiles dans un rayon de 4,5 mètres autour du lanceur
 Jet de sauvegarde : Spécial
 
 Quand l'Auror entonne la complainte de l'hiver, elle devient le vecteur d'une tempête glaciale et meurtrière. Toute créature qui entend la mélodie en subit immédiatement les néfastes conséquences. 
-Celles qui ont 12 Dés de vie ou moins sont instantanément tuées. Les autres doivent réussir un jet de sauvegarde contre la mort magique ou être tuées à leur tour. 
-Les survivants doivent alors endurer le froid glacial provoqué par la chanson, et sont gelées pendant la durée du sort. Les créatures qui échouent à leur jet de sauvegarde contre les sorts sont alors frappées d'hallucinations, subissant terreur et confusion pendant 6 rounds.
+Celles qui ont 12 Dés de vie ou moins sont instantanément tuées. Les autres doivent réussir un jet de sauvegarde contre la mort à -2 ou être tuées à leur tour.
+Les survivants doivent alors endurer le froid glacial provoqué par la chanson : elles sont ralenties et subissent une pénalité de 4 à la classe d'armure, aux jets d'attaques ainsi qu'aux jets de sauvegarde contre le souffle pendant 1 tour. Les créatures qui échouent à leur jet de sauvegarde contre les sorts sont alors frappées aléatoirement d'effets comme des hallucinations, silence, terreur, surdité et confusion pendant 6 rounds.
 
 Ce sort n'affecte pas les membres du groupe, bien qu'ils puissent éprouver des remords en constatant les conséquences de ce maléfice.
 
-L'Auror doit utiliser ce sort avec prudence car il puise dans sa force vitale pour l'alimenter en puissance. A la fin de la chanson, épuisée physiquement et psychiquement, elle tombe inconsciente, incapable de prononcer un seul mot, ce qui la rend vulnérable aux potentielles attaques ennemies.
-En raison de sa nature, l'Auror ne peut pas recevoir aucune aide pendant la durée du sort et une journée entière de repos sera probablement nécessaire pour une récupération complète.~
+L'Auror doit utiliser ce sort avec prudence car elle puise dans sa force vitale pour l'alimenter en puissance. A la fin de la chanson, épuisée physiquement et psychiquement, elle subit 10d8 +20 dégâts non-létaux, devient incapable de prononcer un seul mot, ce qui la rend vulnérable aux potentielles attaques ennemies.
+En raison de sa nature, l'Auror ne peut recevoir ni soin ni aide pendant la durée du sort et une journée entière de repos sera probablement nécessaire pour une récupération complète.~
 
 @127=~Vêtements de <CHARNAME>.~
 
@@ -227,13 +273,16 @@ En raison de sa nature, l'Auror ne peut pas recevoir aucune aide pendant la duré
 PARAMÈTRES :
 
 Capacités d'équipement :
+- Jets de sauvegarde : bonus de 2 contre la paralysie, la mort et les poisons
 - Résistance au feu : +20 %
 - Résistance à l'électricité : +30 %
-Jet de sauvegarde : bonus de 2 contre la paralysie, la mort et les poisons
 
-Capacités de charge :
- Invisibilité majeure : 3 fois par jour.
+Capacités de charge (3 fois par jour) :
+ Invisibilité majeure sur la cible pendant 1 tour
  
+Nécessite : 
+- 16 en Charisme
+
 Poids : 3~
 
 

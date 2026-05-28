@@ -68,7 +68,15 @@ DISADVANTAGES:
 
 //Innates Desc
 
-@129=~With this ability, the Auror can create a sword or a quiver of arrows made of ice.
+@129=~Cryogenesis
+
+Range: Contact
+Duration: Instant
+Casting Time: 0
+Area of Effect: Caster
+Saving Throw: None
+
+With this ability, the Auror can create a sword or a quiver of 5 arrows made of ice.
 This ability increases in potency as the Auror gains experience.~
 
 @130=~Create Ice Blade~
@@ -78,29 +86,65 @@ This ability increases in potency as the Auror gains experience.~
 @118=~This thin, translucent icy blade was created by the Auror's Cryogenesis ability. It is considered magical and behaves as one in respect to its enchantment level.
 
 STATISTICS:
+Equipped abilities: 
+- Attacks per round: Set to 3
 
-Damage: 1d3+3
 THACO: +4
-Damage type: piercing
-Weight: 1
+Damage: 1d3+3 (Piercing)
 Speed Factor: 2
 Proficiency Type: Long Sword
-Type:  1-handed~
+Type: One-Handed
+
+Requires: 
+- 16 Charisma
+
+Weight: 1~
 
 @119=~These arrows are made from the Auror's Cryogenesis ability. They are of pure ice, yet possess the qualities of a normal arrow. They are however, considered magical and behave as one in respect to their enchantment level.
 
 STATISTICS:
 
-Damage: 1d6
-THACO: none
-Damage type: missile (piercing)
-Weight: 0
-Launcher: bow~
+Damage: 1d6 (Missile)
+Launcher: Bow
+
+Requires: 
+- 17 Dexterity
+- 16 Charisma
+
+Weight: 0~
+
 
 @126=~Far Sense~
-@134=~The Auror can extend her psychic sense over long distances to reveal areas that are otherwise impossible through the use of the naked eye.~
-@132=~The Auror can disappear in a gust of ice, and reappear anywhere in an area.~
-@133=~The Auror can supercharge her missile attacks with psionic force. For 4 rounds, all her ranged attacks will explode upon impact, dealing 1d4 stunning and 2d4 cold damage +1 for every 3 levels of experience. Her attack speed incurs a penalty of -2 for the duration of the ability.~
+@134=~Far Sense
+(Divination)
+
+Range: Contact
+Duration: 2 rounds + 1 round/3 levels
+Casting Time: 0
+Area of Effect: Caster
+Saving Throw: None
+
+The Auror can extend her psychic sense over long distances to reveal areas that are otherwise impossible through the use of the naked eye.~
+@132=~Frost Blink
+(Alteration)
+
+Range: 900 feet
+Duration: 1 second
+Casting Time: 0
+Area of Effect: Point in the visual range of the caster
+Saving Throw: None
+
+The Auror can disappear in a gust of ice, and reappear anywhere in an area.~
+@133=~Frostbite
+(Enchantment)
+
+Range: Contact
+Duration: 4 rounds
+Casting Time: 0
+Area of Effect: Caster
+Saving Throw: None
+
+The Auror can supercharge her missile attacks with psionic force. For 4 rounds, all her ranged attacks will explode upon impact, dealing 1d4 stunning and 2d4 cold damage +1 for every 3 levels of experience. Her attack speed incurs a penalty of -2 for the duration of the ability.~
 
 //Spells Name
 @112=~Glacial Aura~
@@ -118,7 +162,7 @@ Level: 1
 Sphere: Elemental (Water)
 Range: Personal
 Duration: 1 hour per level
-Casting Time: 1 round
+Casting Time: 9
 Area of Effect: 15'
 Saving Throw: Special
 
@@ -130,8 +174,8 @@ The Auror is surrounded by a blue aura that protects her from attacks, granting 
 Level: 1
 Sphere: Elemental (Water)
 Range: Personal
-Duration: Instantaneous
-Casting Time: Instantaneous
+Duration: Special
+Casting Time: 1
 Area of Effect: 20'
 Saving Throw: Special
 
@@ -159,7 +203,7 @@ Level: 2
 Sphere: Elemental (Water)
 Range: 100 yds.
 Duration: 1 hour
-Casting Time: 1 round
+Casting Time: 9
 Area of Effect: 5' radius around the creature targeted
 Saving Throw: Negates
 
@@ -172,7 +216,7 @@ This spell is normally used by Aurors in apprehending creatures. However, there 
 
 Level: 3
 Sphere: Elemental (Water)
-Range: Within the Auror's location
+Range: 900 feet
 Duration: Instantaneous
 Casting Time: 4
 Area of Effect: 30'
@@ -187,7 +231,7 @@ Level: 3
 Sphere: Death, Elemental (Water)
 Range: Personal
 Duration: Instantaneous
-Casting time: 2
+Casting Time: 2
 Area of Effect: 30'
 Saving Throw: Special
 
@@ -201,8 +245,15 @@ The Auror must take caution when using this spell as it requires her life force 
 
 STATISTICS:
 
-Bonuses: +30% bonus resistance to electricity, +20% bonus resistance to fire
-Saving Throw: +2 bonus vs. death
-Special Abilities:
- Improved Invisibility: Three times per day.
+Equipped abilities: 
+- Saving Throws: +2 vs. Death
+- Fire Resistance: +20%
+- Electric Resistance: +30%
+
+Charge ability (3x per day): 
+- Cast Improved invisibility on the target for 1 turn
+
+Requires: 
+- 16 Charisma
+
 Weight: 3~
