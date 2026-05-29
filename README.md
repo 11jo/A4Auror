@@ -18,11 +18,11 @@
 
 [Link to original Mod Forum](http://www.shsforums.net/topic/37463-auror-kit-for-the-ranger-class/)
 
-[Link to original Mod Download](https://github.com/11jo/A4Auror/releases/tag/v4.4.1)
+[Link to original Mod Download](https://github.com/The-Gate-Project/A4Auror/releases/tag/v4.4.1)
 
-[Link to full readme in english](https://github.com/11jo/A4Auror/blob/main/A4Auror/Readme/Readme-Auror.english.txt)
+[Link to full readme in english](https://github.com/The-Gate-Project/A4Auror/blob/main/A4Auror/Readme/Readme-Auror.english.txt)
 
-[Link to full readme in french](https://github.com/11jo/A4Auror/blob/main/A4Auror/Readme/Readme-Auror.french.txt)
+[Link to full readme in french](https://github.com/The-Gate-Project/A4Auror/blob/main/A4Auror/Readme/Readme-Auror.french.txt)
 
 ---
 
@@ -39,7 +39,7 @@ Run Setup-A4Auror.exe
 Follow the prompt
 
 
-## Thanks:
+## Credits:
 --------
 
 First of all, I would like to thank CamDawg for his awesome kit tutorial. I would also like to thank Daulmakan, The Imp, Wisp and Kwiat_W of SHS Forums for entertaining my questions, no matter how annoying they were. Lastly, I would also like to thank you, yes you! for trying out my mod. I hope you'd like it as much as I enjoy remaking it.
@@ -62,6 +62,7 @@ Anyway, thank you again and I hope you enjoy playing as an Auror. cheers! :D
 	- Label  
 	- WeiduModPackager  
 	- ini  
+	- Readme
 
 - Version 4.4.2  
 	- Uprade fl#add_kit_ee 2016 edition to 2017 edition for better EET compatibility

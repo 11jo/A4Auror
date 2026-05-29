@@ -42,7 +42,17 @@ SOMMAIRE////////////////////////////////////////////////////////////////////
 
 Versions/////////////////////////////////////////////////////////////(au00)
 
-Version 4.4.1
+Version 4.5  
+- Mod review by @RiwsPy
+- Update tp2 
+- Designated
+- Autotra
+- Label  
+- WeiduModPackager  
+- ini  
+- Readme
+
+Version 4.4.2
 - Uprade fl#add_kit_ee 2016 edition to 2017 edition for better EET compatibility
 - Add French translation.
 - Correct items proficiency.

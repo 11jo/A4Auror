@@ -257,3 +257,41 @@ Requires:
 - 16 Charisma
 
 Weight: 3~
+
+/*
+@131
+@200=~Cryogenesis - Frost Arrow starting at Level 4
+
+These arrows are made from the Auror's Cryogenesis ability. They are of pure ice, yet possess the qualities of a normal arrow. They are however, considered magical and behave as one in respect to their enchantment level.
+
+STATISTICS:
+
+Damage: 1d6 (Missile)
+Launcher: Bow
+
+Requires: 
+- 17 Dexterity
+- 16 Charisma
+
+Weight: 0~
+
+@130
+@201=~Cryogenesis - Ice Blade starting at Level 2
+
+This thin, translucent icy blade was created by the Auror's Cryogenesis ability. It is considered magical and behaves as one in respect to its enchantment level.
+
+STATISTICS:
+Equipped abilities: 
+- Attacks per round: Set to 3
+
+THACO: +4
+Damage: 1d3+3 (Piercing)
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: One-Handed
+
+Requires: 
+- 16 Charisma
+
+Weight: 1~
+*/

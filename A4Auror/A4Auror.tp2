@@ -37,7 +37,7 @@ ALWAYS
 			LAF HANDLE_CHARSETS
 				INT_VAR
 				infer_charsets = 1
-//				from_utf8      = 1
+				from_utf8      = 1
 				STR_VAR
 				tra_path = EVAL ~weidu_external/A4Auror/Language/autotra~
 				out_path = EVAL ~weidu_external/A4Auror/Language/autotra~
@@ -46,11 +46,11 @@ ALWAYS
 				reload_array = A4_reload
 			END
 
-	END 
+	END
 END
 
 AUTO_TRA ~weidu_external/A4Auror/Language/autotra/%s~
-  
+
 LANGUAGE ~English~
 		 ~english~
 		 ~A4Auror/Language/english/Setup.tra~
@@ -72,56 +72,56 @@ ADD_KIT ~A4AUROR~
 
  //appended to CLASWEAP.2da
  ~A4AUROR	       1	1	0	1	1	0	0	1~
- 
+
  //appended column-wise to WEAPPROF.2da
  ~A4AUROR 1 1 5 1 0 0 0 2 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 2 5 5 2 2 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
- 
+
  //appended to ABCLASRQ.2da
  ~A4AUROR	9	17	7	14	12	16~
- 
+
  //appended to ABCLSMOD.2da
  ~A4AUROR	-6	2	-8	0	0	0~
- 
+
  //appended to ABDCDSRQ.2da
  ~A4AUROR	0	17	0	14	12	16~
- 
+
  //appended to ABDCSCRQ.2da
  ~A4AUROR	0	17	0	14	12	16~
- 
+
  //appended to ALIGNMNT.2da
  ~A4AUROR	0       0       0       1       0       0       1       0       0~
- 
+
  //appended to DUALCLAS.2da
  ~A4AUROR	0	0	0	0	0	0~
- 
+
  //path to CLAB-style 2da file
  ~A4Auror/2da/CLABA4AU.2da~
- 
+
  //appended to KITTABLE.2da
  ~K_R_H K_R_E K_R_HE~
- 
+
  //usability flags appended to KITLIST.2da
  ~0x10000000	12~
- 
+
  //HLA abilities appended to LUABBR.2da
  ~***~
- 
+
  //appended to 25STWEAP.2da
  ~* * HELM07 BAG24 RING06 RING31 CLCK02 BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H39 STAF08~
- 
+
  //Kit name and description
  SAY @10
  SAY @11
  SAY @12
- 
+
  // Call EE compatibility patch
 // ACTION_IF (NOT GAME_IS ~soa tob tutu tutu_totsc bgt ca iwd_in_bg2~) BEGIN
  ACTION_IF (GAME_IS ~bgee bg2ee eet~) BEGIN
- 
+
  // EE compatibility patch, updated version by Subtledoctor
          INCLUDE ~A4Auror/lib/fl#add_kit_ee.tpa~
          COPY ~A4Auror/2da/HPA4AU.2da~ ~override~
-         
+
          LAF fl#add_kit_ee
          STR_VAR
                 kit_name = A4AUROR
@@ -129,7 +129,7 @@ ADD_KIT ~A4AUROR~
                 hpclass = ~HPA4AU~
          END
  END
- 
+
  //KIT COMPONENTS
  //Miscellaneous
  COPY ~A4Auror/Projectile/BAM~ ~override~
@@ -187,7 +187,7 @@ ADD_KIT ~A4AUROR~
  COPY ~A4Auror/Innate/A4AUI0BE.itm~ ~override~
  	SAY NAME2 @109
  	SAY DESC @119
- 
+
  COPY ~A4Auror/Innate/A4AUI01.spl~ ~override~
  	SAY NAME1 @110
  	SAY UNIDENTIFIED_DESC @132
@@ -315,8 +315,8 @@ ADD_KIT ~A4AUROR~
 		INT_VAR
 			projectile  = EVAL  ~%A4AUP02%~
 	END
- 
- ADD_PROJECTILE ~A4Auror/Projectile/A4AUP01.pro~ 
+
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP01.pro~
  COPY ~A4Auror/Spell/A4AUS01.spl~ ~override~
   	SAY NAME1 @113
 	SAY UNIDENTIFIED_DESC @121
@@ -337,7 +337,7 @@ ADD_KIT ~A4AUROR~
 	SAY NAME1 @114
 	SAY UNIDENTIFIED_DESC @122
 
- ADD_PROJECTILE ~A4Auror/Projectile/A4AUP03.pro~ 
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP03.pro~
  COPY ~A4Auror/Spell/A4AUS03.spl~ ~override~
 	SAY NAME1 @115
 	SAY UNIDENTIFIED_DESC @123
@@ -354,7 +354,7 @@ ADD_KIT ~A4AUROR~
 			projectile  = EVAL  ~%A4AUP03%~
 	END
 
- ADD_PROJECTILE ~A4Auror/Projectile/A4AUP04.pro~ 
+ ADD_PROJECTILE ~A4Auror/Projectile/A4AUP04.pro~
  COPY ~A4Auror/Spell/A4AUS04.spl~ ~override~
 	SAY NAME1 @116
 	SAY UNIDENTIFIED_DESC @124
@@ -365,7 +365,7 @@ ADD_KIT ~A4AUROR~
 //	WRITE_SHORT   0x138 ~%A4AUP04%~
 	LPF ALTER_SPELL_HEADER
 		INT_VAR
-			check_headers = 1 
+			check_headers = 1
 			projectile  = EVAL  ~%A4AUP04%~
 	END
 
@@ -381,9 +381,9 @@ ADD_KIT ~A4AUROR~
 			check_headers = 1
 			projectile  = EVAL  ~%A4AUP05%~
 	END
- 
+
  COPY ~A4Auror/Spell/A4AUS05Z.spl~ ~override~
- 
+
  //Items
  COPY ~A4Auror/Item/A4AUITM0.itm~ ~override~
  	SAY NAME2 @127
@@ -394,4 +394,3 @@ ACTION_IF (GAME_IS ~tob bgt bg2ee eet~) THEN BEGIN
  EXTEND_BOTTOM ~AR0602.bcs~	~A4Auror/Item/A4AU0602.baf~    // irenicus dungeon 1st floor
 // COMPILE ~A4Auror/Item/A4AU0602.baf~
 END
-	
