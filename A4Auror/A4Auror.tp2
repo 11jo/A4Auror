@@ -29,7 +29,7 @@ ALWAYS
 
 	LAF autotra_workaround END
 
-	ACTION_IF GAME_IS ~bgee bg2ee eet~ BEGIN
+	ACTION_IF NOT GAME_IS ~bgee bg2ee eet~ BEGIN
 
 //			ACTION_DEFINE_ARRAY A4_noconvert BEGIN END
 
